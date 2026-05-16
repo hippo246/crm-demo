@@ -72,6 +72,7 @@ export function useDeliveryEvents(deliveryId) {
     }
     setLoading(false);
   }
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!deliveryId) { setEvents([]); setLoading(false); return; }
@@ -91,8 +92,6 @@ export function useDeliveryEvents(deliveryId) {
     return () => {
       window.removeEventListener("deliveryEventsUpdated", onUpdate);
       window.removeEventListener("storage", onStorage);
-// eslint-disable-next-line react-hooks/exhaustive-deps
-// eslint-disable-next-line react-hooks/exhaustive-deps
     };
   }, [deliveryId]);
 
