@@ -91,6 +91,7 @@ export function useDeliveryEvents(deliveryId) {
     return () => {
       window.removeEventListener("deliveryEventsUpdated", onUpdate);
       window.removeEventListener("storage", onStorage);
+// eslint-disable-next-line react-hooks/exhaustive-deps
     };
   }, [deliveryId]);
 
