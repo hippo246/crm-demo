@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
 // deliveryEngine.js — DEMO VERSION (localStorage, no Firebase)
 // Drop-in replacement: same exports and function signatures as the Firebase version.
 
@@ -72,7 +73,6 @@ export function useDeliveryEvents(deliveryId) {
     }
     setLoading(false);
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!deliveryId) { setEvents([]); setLoading(false); return; }
     refresh();
